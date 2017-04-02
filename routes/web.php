@@ -12,13 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-
-Route::get('/bootstrap', function () {
-    return view('firstbootstrap');
-});
+// Route::get('/about-us', function () {
+//     return view('about-us');
+// });
+//
+//
+// Route::get('/bootstrap', function () {
+//     return view('firstbootstrap');
+// });
 
 Auth::routes();
 

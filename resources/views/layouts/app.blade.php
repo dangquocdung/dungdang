@@ -19,6 +19,8 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+    @yield('css')
+
 </head>
 <body>
     <div id="app">
@@ -60,6 +62,13 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
+                                      <a href="/admin">Voyager</a>
+                                    </li>
+                                    <li>
+                                      <a href="/forums">Chatter</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -70,6 +79,7 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+
                                 </ul>
                             </li>
                         @endif
@@ -83,5 +93,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('js')
+
 </body>
 </html>
