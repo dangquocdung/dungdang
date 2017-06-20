@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    // return view('index');
+    return redirect ('index.html');
 });
 
 // Route::get('/about-us', function () {
